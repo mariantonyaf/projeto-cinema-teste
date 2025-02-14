@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Compra de Ingressos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Escolha seu assento.</h1>
+    <h1>Escolha seu filme e assentos</h1>
+
+    <label for="movie">Escolha o filme:</label>
+    <select id="movie">
+        <option value="20">Filme A - R$20</option>
+        <option value="25">Filme B - R$25</option>
+        <option value="30">Filme C - R$30</option>
+    </select>
 
     <div class="screen">Tela</div>
 
@@ -19,7 +26,6 @@
             <div class="seat"></div>
             <div class="seat"></div>
         </div>
-
         <div class="row">
             <div class="seat"></div>
             <div class="seat"></div>
@@ -27,7 +33,6 @@
             <div class="seat occupied"></div>
             <div class="seat"></div>
         </div>
-
         <div class="row">
             <div class="seat"></div>
             <div class="seat occupied"></div>
@@ -36,8 +41,11 @@
             <div class="seat"></div>
         </div>
     </div>
+
     <p>Ingressos selecionados: <span id="count">0</span></p>
     <p>Total: R$ <span id="total">0</span></p>
+
+    <button id="purchase">Finalizar Compra</button>
 
     <script src="script.js"></script>
 </body>
