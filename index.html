@@ -3,49 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compra de Ingressos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cinema Tickets</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Escolha seu filme e assentos</h1>
-
-    <label for="movie">Escolha o filme:</label>
-    <select id="movie">
-        <option value="20">Filme A - R$20</option>
-        <option value="25">Filme B - R$25</option>
-        <option value="30">Filme C - R$30</option>
-    </select>
-
-    <div class="screen">Tela</div>
-
-    <div class="container">
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-        </div>
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-    </div>
-
-    <p>Ingressos selecionados: <span id="count">0</span></p>
-    <p>Total: R$ <span id="total">0</span></p>
-
-    <button id="purchase">Finalizar Compra</button>
+    <header>
+        <h1>🎬 Cinema Tickets</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Meus Ingressos</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="movies">
+            <h2>Escolha um Filme</h2>
+            <div class="movie-list">
+                <div class="movie" data-price="20">
+                    <h3>Filme A</h3>
+                    <p>R$20,00</p>
+                    <button class="select-movie">Selecionar</button>
+                </div>
+                <div class="movie" data-price="25">
+                    <h3>Filme B</h3>
+                    <p>R$25,00</p>
+                    <button class="select-movie">Selecionar</button>
+                </div>
+                <div class="movie" data-price="30">
+                    <h3>Filme C</h3>
+                    <p>R$30,00</p>
+                    <button class="select-movie">Selecionar</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="seats" style="display:none;">
+            <h2>Escolha seus assentos</h2>
+            <div class="screen">Tela</div>
+            <div class="seating-area">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <p>Ingressos selecionados: <span id="count">0</span></p>
+            <p>Total: R$ <span id="total">0</span></p>
+            <button id="checkout">Ir para Pagamento</button>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
