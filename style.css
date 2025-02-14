@@ -6,7 +6,17 @@ body{
     background-color: #f4f4f4;
 }
 
-.screen{
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.screen {
     width: 200px;
     height: 50px;
     background-color: black;
@@ -18,19 +28,19 @@ body{
     font-weight: bold;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.row{
+.row {
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
 }
 
-.seat{
+.seat {
     width: 30px;
     height: 30px;
     background-color: #ccc;
@@ -39,11 +49,26 @@ body{
     cursor: pointer;
 }
 
-.seat.occupied{
+.seat.occupied {
     background-color: red;
     cursor: not-allowed;
 }
 
-.seat.selected{
+.seat.selected {
     background-color: green;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkblue;
 }
